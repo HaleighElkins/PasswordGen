@@ -6,6 +6,7 @@ var numberCheck;
 var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var uppercaseCheck; 
 var lowercaseABE = "abcdefghijklmnopqrstuvwxyz";
+var lowercaseCheck;
 
 
 
@@ -33,7 +34,7 @@ var lowercaseABE = "abcdefghijklmnopqrstuvwxyz";
 
 
   function determineUppercase(){
-    uppercaseCheck = prompt ("Would you like to use an uppercase letter?")
+    uppercaseCheck = prompt ("Would you like to use an uppercase letter?");
 
     if (uppercaseCheck === null || uppercaseCheck === ""){
       alert("Yes or No");
@@ -54,7 +55,27 @@ var lowercaseABE = "abcdefghijklmnopqrstuvwxyz";
     return uppercaseCheck;
   }
 
+  function determineLowercase(){
+    lowercaseCheck + prompt ("Would you like to use an lowercase letter?");
 
+    if (lowercaseCheck === null || lowercaseCheck === ""){
+      alert("Yes or No");
+      determineLowercase();
+
+    }else if (lowercaseCheck === "yes" || lowercaseCheck === "y"){
+      numberCheck = true;
+      return numberCheck;
+
+    }else if (lowercaseCheck === "no" || lowercaseCheck === "n"){
+      numberCheck = false;
+      return numberCheck;
+
+    }else {
+      alert ("Please answer Yes or No");
+      determineLowercase();
+    }  
+    return lowercaseCheck;
+  }
 
   // Write password to the #password input
 function writePassword() {
