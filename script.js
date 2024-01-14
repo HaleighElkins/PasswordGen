@@ -2,13 +2,14 @@
 var generateBtn = document.querySelector("#generate");
 // moved var generateBtn to top to organize my own code. 
 var passwordLength;
-var numberCheck;
 var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var uppercaseCheck; 
 var lowercaseABE = "abcdefghijklmnopqrstuvwxyz";
 var lowercaseCheck;
 var specialChar = "!@#$%^&*()+}{[]?/><,.=-_"
 var specialCheck;
+var numberChar = "1234567890";
+var numberCheck;
 
 
   // This will be the length of the password critera 
@@ -99,11 +100,30 @@ function determineSpecial(){
   return specialCheck;
 }
 
-
-
-
-
   // Numbers in the password
+
+  function determineNumbers(){
+    numberCheck + prompt ("Would you like to use a number?");
+
+    if (numberCheck === null || numberCheck === ""){
+      alert ("Yes or No");
+      determineNumbers();
+
+    }else if (numberCheck === "yes" || numberCheck === "y"){
+    numberCheck = true;
+    return numberCheck;
+
+    }else if (numberCheck === "no" || numberCheck === "n"){
+      numberCheck = false;
+      return numberCheck;
+
+    }else{
+      alert ("Please answer Yes or No");
+      determineNumbers();
+    }
+    return numberCheck;
+  }
+
 
   // Write password to the password input
 function writePassword() {
