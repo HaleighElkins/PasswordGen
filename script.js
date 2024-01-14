@@ -114,40 +114,37 @@ function determineSpecial(){
     console.log(specialCheck);
     determineNumbers();
     console.log(numberCheck);
-  }
 
   var characters = lowercaseChar;
   var password = "";
 
-  if (uppercaseCheck && specialCheck && numberCheck){
-    characters += uppercaseABC + specialCheck;
+if (uppercaseCheck && numberCheck && specialCheck){
+  characters += uppercaseCheck + numberChar + specialChar;
 
-  }else if (uppercaseCheck && specialCheck){
-    characters += uppercaseABC + specialChar;
+}else if (uppercaseCheck && numberCheck){
+  characters += numberChar = specialChar;
 
-  }else if (numberCheck && specialCheck){
-    characters += numberChar = specialChar;
+}else if (numberCheck && specialCheck){
+  characters += numberChar + specialChar;
 
-  }else if (uppercaseCheck && numberCheck){
-    characters += uppercaseABC + numberChar;
+}else if (uppercaseCheck && specialCheck){
+  characters += uppercaseABC + specialChar;
 
-  } else if (uppercaseCheck){
-    characters += uppercaseABC;
+}else if (numberCheck){
+  characters += numberChar;
 
-  }else if (specialCheck){
-    characters += specialChar;
+}else if (specialCheck){
+  characters += specialChar;
 
-  }else if (numberCheck){
-    characters += numberChar;
+}else {
+  characters === lowercaseChar;
+}
 
-  }else {
-    characters === lowercaseChar;
-  }
-
-  for (var i = 0; i < passwordLength; i++){
+for (var i = 0; i < passwordLength; i++){
     password += characters.charAt(Math.floor(Math.random() * characters.length));
+}
+return password;
   }
-
 
 
   // Write password to the password input
