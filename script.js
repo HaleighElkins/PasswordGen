@@ -7,7 +7,8 @@ var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var uppercaseCheck; 
 var lowercaseABE = "abcdefghijklmnopqrstuvwxyz";
 var lowercaseCheck;
-
+var specialChar = "!@#$%^&*()+}{[]?/><,.=-_"
+var specialCheck;
 
 
   // This will be the length of the password critera 
@@ -29,9 +30,7 @@ var lowercaseCheck;
     return passwordLength;
   }
 
-// This will be for the letters in the password
-
-
+// This will be for for the upper or lowercase letters in the password
 
   function determineUppercase(){
     uppercaseCheck = prompt ("Would you like to use an uppercase letter?");
@@ -77,7 +76,36 @@ var lowercaseCheck;
     return lowercaseCheck;
   }
 
-  // Write password to the #password input
+  // Special Characters
+function determineSpecial(){
+  specialCheck + prompt ("Would you like to use a special character?");
+
+  if (specialCheck === null || specialCheck === ""){
+    alert ("Yes or No");
+    determineSpecial();
+
+  }else if (specialCheck === "yes" || specialCheck === "y"){
+    specialCheck = true;
+    return specialCheck;
+
+  }else if (specialCheck === "no" || specialCheck === "n"){
+    specialCheck = false;
+    return specialCheck;
+
+  } else{
+    alert ("Please answer Yes or No");
+    determineSpecial();
+  }
+  return specialCheck;
+}
+
+
+
+
+
+  // Numbers in the password
+
+  // Write password to the password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
