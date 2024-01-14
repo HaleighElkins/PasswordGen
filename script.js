@@ -2,13 +2,13 @@
 var generateBtn = document.querySelector("#generate");
 // moved var generateBtn to top to organize my own code. 
 var passwordLength;
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
 var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var uppercaseCheck; 
-var specialChar = "!@#$%^&*()+}{[]?/><,.=-_"
+var specialChar = "!@#$%^&*()+}{[]?/><,.=-_";
 var specialCheck;
 var numberChar = "1234567890";
 var numberCheck;
+var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 
 
   // This will be the length of the password critera 
