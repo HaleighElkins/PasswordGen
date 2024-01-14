@@ -14,7 +14,7 @@ var numberCheck;
 
   // This will be the length of the password critera 
   function determineLength(){
-    passwordLength = prompt ("how long the password should be?");
+    passwordLength = prompt ("How long would you like your password to be? Please chose between 8-50.");
 
   if (passwordLength<8){
     alert("Password Length much be a number between 8-50 characters.");
@@ -26,7 +26,7 @@ var numberCheck;
     alert ("Password length much be a number between 8-50 characters.");
   
   }else{
-      alert("Next steps")
+      alert("Thank you, the next steps will determine what you would like in your password.")
     }
     return passwordLength;
   }
