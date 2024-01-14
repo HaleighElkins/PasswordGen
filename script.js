@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 // moved var generateBtn to top to organize my own code. 
 var passwordLength;
+var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
 var uppercaseABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var uppercaseCheck; 
 var specialChar = "!@#$%^&*()+}{[]?/><,.=-_"
@@ -20,7 +21,7 @@ var numberCheck;
   }else if (passwordLength>50){
     alert("Password length much be a number between 8-50 characters.");
   
-  // }else if no number is prsented
+  }else if (isNaN(passwordLength)){
     alert ("Password length much be a number between 8-50 characters.");
   
   }else{
@@ -54,9 +55,10 @@ var numberCheck;
   }
 
   // Special Characters
+
 function determineSpecial(){
-  specialCheck + prompt ("Would you like to use a special character?(Yes or NO)");
-  specialCheck = specialCheck.toLowercase();
+  specialCheck = prompt ("Would you like to use a special character?(Yes or No)");
+  specialCheck = specialCheck.toLowerCase();
 
   if (specialCheck === null || specialCheck === ""){
     alert ("Yes or No");
@@ -80,8 +82,8 @@ function determineSpecial(){
   // Numbers in the password
 
   function determineNumbers(){
-    numberCheck + prompt ("Would you like to use a number? (Yes or No");
-    numberCheck = numberCheck.toLowercase();
+    numberCheck = prompt ("Would you like to use a number? (Yes or No)");
+    numberCheck = numberCheck.toLowerCase();
 
     if (numberCheck === null || numberCheck === ""){
       alert ("Yes or No");
@@ -114,12 +116,45 @@ function determineSpecial(){
     console.log(numberCheck);
   }
 
+  var characters = lowercaseChar;
+  var password = "";
+
+  if (uppercaseCheck && specialCheck && numberCheck){
+    characters += uppercaseABC + specialCheck;
+
+  }else if (uppercaseCheck && specialCheck){
+    characters += uppercaseABC + specialChar;
+
+  }else if (numberCheck && specialCheck){
+    characters += numberChar = specialChar;
+
+  }else if (uppercaseCheck && numberCheck){
+    characters += uppercaseABC + numberChar;
+
+  } else if (uppercaseCheck){
+    characters += uppercaseABC;
+
+  }else if (specialCheck){
+    characters += specialChar;
+
+  }else if (numberCheck){
+    characters += numberChar;
+
+  }else {
+    characters === lowercaseChar;
+  }
+
+  for (var i = 0; i < passwordLength; i++){
+    password += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+
+
 
   // Write password to the password input
 function writePassword() {
+  var password = "";
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 }
 // Moved to bottom? This is last step 
