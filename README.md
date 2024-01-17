@@ -27,5 +27,7 @@ THEN the password is either displayed in an alert or written to the page
 * I worked with my fellow students Rebecca F. to start writting out the code. 
 
 ## Deploment 
-(SCREEN SHOT)
-(URL)
+
+Here is a screenshot of my website:
+
+<img width="1128" alt="Screenshot 2024-01-16 194201" src="https://github.com/HaleighElkins/PasswordGen/assets/152942336/c4fb7a24-6ac0-4833-be30-00c25ef2fa1d">
