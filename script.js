@@ -7,8 +7,8 @@ var uppercaseCheck;
 var specialChar = "!@#$%^&*()+}{[]?/><,.=-_";
 var specialCheck;
 var numberChar = "1234567890";
-var numberCheck;
-var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+var numbercheck;
+var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
 
 
   // This will be the length of the password critera 
@@ -33,8 +33,9 @@ var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 // This will be for for the upper or lowercase letters in the password
 
   function determineUppercase(){
-    uppercaseCheck = prompt ("Would you like to use an Uppercase letter? If you chose No all the letters will be lowercase");
 
+    uppercaseCheck = prompt ("Would you like to use a uppercase letter? If you chose No, all the letters will be lowercase");
+    
     if (uppercaseCheck === null || uppercaseCheck === ""){
       alert("Yes or No");
       determineUppercase();
@@ -75,6 +76,8 @@ function determineSpecial(){
   }else{
     alert ("Please answer Yes or No");
     determineSpecial();
+    
+
   }
   return specialCheck;
 }
