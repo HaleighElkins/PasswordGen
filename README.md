@@ -26,8 +26,10 @@ THEN the password is either displayed in an alert or written to the page
 ## Credits 
 * I worked with my fellow students Rebecca F. to start writting out the code. 
 
-## Deploment
+## Deploymnet
 
+Here is my deployed active URL :
+https://haleighelkins.github.io/PasswordGen/ 
 
 Here is a screenshot of my image
 <img width="1128" alt="Screenshot" src="https://github.com/HaleighElkins/PasswordGen/assets/152942336/a4fc9ac4-7af7-4188-9747-ee217be2ea6a">
