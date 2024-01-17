@@ -27,6 +27,5 @@ THEN the password is either displayed in an alert or written to the page
 * I worked with my fellow students Rebecca F. to start writting out the code. 
 
 ## Deploment 
-
 (SCREEN SHOT)
 (URL)
