@@ -30,5 +30,5 @@ THEN the password is either displayed in an alert or written to the page
 
 
 Here is a screenshot of my image
-<img width="1128" alt="Screenshot 2024-01-16 194201" src=./assets/images/Screenshot.pg
+<img width="1128" alt="Screenshot" src="https://github.com/HaleighElkins/PasswordGen/assets/152942336/a4fc9ac4-7af7-4188-9747-ee217be2ea6a">
 
